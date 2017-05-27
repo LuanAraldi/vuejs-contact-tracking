@@ -1,7 +1,24 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+  <div>
+    <nav id="nav-bar">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">RD</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <router-link tag="li" to="/">
+            <a>Home</a>
+          </router-link>
+          <router-link tag="li" to="/preco">
+            <a>Preço</a>
+          </router-link>
+          <router-link tag="li" to="/contato">
+            <a>Contato</a>
+          </router-link>
+        </ul>
+      </div>
+    </nav>
+    <div id="app">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -19,5 +36,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+nav {
+  background-color: #35739f;
 }
 </style>
