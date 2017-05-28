@@ -7,14 +7,18 @@
 </template>
 
 <script>
-export default {
-  name: 'hello',
-  data () {
-    return {
-      msg: 'HOME'
+  import rdSender from 'rd-contact-tracking-sender'
+
+  export default {
+    data () {
+      return {
+        msg: 'HOME'
+      }
+    },
+    created: function () {
+      rdSender.send()
     }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
